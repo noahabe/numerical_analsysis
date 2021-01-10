@@ -23,7 +23,8 @@ requirements
 NUMBER false_position(
 	std::function<NUMBER(NUMBER)> f, 
 	NUMBER x0, NUMBER x1, NUMBER tlv) {
-	
+		
+	assert( f(x0) * f(x1) < 0);
 	NUMBER x2;
 	do {
 		x2 = x1 - f(x1) * ( (x0 - x1) / (f(x0) - f(x1)) ); 
