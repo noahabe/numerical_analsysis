@@ -32,14 +32,14 @@ NUMBER false_position(
 		else
 			x0 = x2;
 	} while ( std::abs(f(x2)) >= tlv );	
-	return x0;
+	return x2;
 } 
 
 int main(void) {
 	auto f = [](NUMBER x) {
 		return 3*x + std::sin(x) - std::exp(x);
 	};	
-	NUMBER root = false_position(f,0.0,0.000001,0.00001);
+	NUMBER root = false_position(f,0.0,0.6,0.00001);
 	std::cout << root << std::endl;
 }
 
