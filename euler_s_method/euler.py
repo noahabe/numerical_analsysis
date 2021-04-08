@@ -11,8 +11,9 @@ def euler_s_method(f,h:float,x0:float,y0:float,x:float)->float:
 	we want to evaluate the unknown function y(x) at x.
 	we know that y(x0) = y0. (the inital condition)
 	'''
-	while x0 != x:
+	while abs(x0-x) >= 10e-6:
 		x0,y0 = x0+h,y0+h*f(x0,y0)
+		print(x0,y0) #for debugging purposes only
 	return y0
 
 

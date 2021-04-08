@@ -7,4 +7,5 @@ Example 1 of the book "A first course in differential equations with modeling ap
 
 f = lambda x,y:0.1*sqrt(y) + 0.4*x*x
 print(euler_s_method(f,0.1,2,4,2.5))
+print("\n")
 print(euler_s_method(f,0.05,2,4,2.5))
